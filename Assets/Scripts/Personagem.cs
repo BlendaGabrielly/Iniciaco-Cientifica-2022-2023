@@ -63,19 +63,22 @@ public class Personagem : MonoBehaviour
         if(Input.GetButtonDown("Jump")){
 
             if(!EstaPulando){
+
                 EstaPulando = !EstaPulando;
                 rig.AddForce(new Vector2(0f, ForcaDoPulo), ForceMode2D.Impulse);
+                animacao.SetBool("pulando", true);
+
             }else if(!PuloDuplo){
+
                 PuloDuplo = !PuloDuplo;
                 rig.AddForce(new Vector2(0f, ForcaDoPulo), ForceMode2D.Impulse);
+                animacao.SetBool("pulando", true);
+
             }
 
         }
     }
 
 
-    
-
-
-    
+   
 }
